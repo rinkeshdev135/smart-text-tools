@@ -5,6 +5,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
           </div>
           <Footer />
+          <Analytics />
         </div>
       </body>
     </html>
